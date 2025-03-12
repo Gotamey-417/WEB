@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form with Background</title>
+  <style>
+    /* Set creamy background for the whole page */
+    body {
+      background-color: #f5e6cc; /* Creamy color */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    /* Styling the form container */
+    .form-container {
+      width: 350px;
+      background-color: #f0f0f0; /* Light gray background for form */
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Light shadow */
+      text-align: center;
+    }
+
+    /* Input fields */
+    input[type="text"], input[type="password"] {
+      width: 100%;
+      padding: 8px;
+      margin: 5px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    /* Positioning "Remember me" and "Forget Password" */
+    .pos1 {
+      position: relative;
+      text-align: left;
+      margin-top: 10px;
+    }
+
+    .pos1 label {
+      display: inline-block;
+    }
+
+    .pos2 {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+    a {
+      text-decoration: none;
+      color: blue;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Submit button */
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: blue;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: darkblue;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <form action="action_page.php">
+      <h1>Welcome Back!</h1>
+      <p>Please enter your login details</p>
+      
+      <input type="text" placeholder="Enter your Email" name="email" required><br>
+      <input type="password" placeholder="Enter your password" name="password" required><br> 
+      
+      <div class="pos1">
+        <input type="checkbox" name="Trust" id="Trust">
+        <label for="Trust">Remember me</label>
+        <div class="pos2">
+          <a href="#">Forget Password?</a>
+        </div>
+      </div>
+      
+      <br><br>
+      <button type="submit">Login</button>
+    </form>
+  </div>
+
+</body>
+</html>
